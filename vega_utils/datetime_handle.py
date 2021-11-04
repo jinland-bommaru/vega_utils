@@ -10,11 +10,7 @@ from dateutil.relativedelta import relativedelta
 # ----------------------------------------------------
 # User define library import area
 # ----------------------------------------------------
-import sys
-from os.path import dirname, abspath
-BASE_DIR = dirname(dirname(dirname(abspath(__file__))))	# if you wnat parent current dir -->  dirname(dirname(abspath(__file__)))
-sys.path.append(BASE_DIR)
-from lib.utils.string_handle import StringHandle as sh
+from vega_utils.string_handle import StringHandle as sh
 
 
 class DatetimeHandleError(Exception):
@@ -241,7 +237,7 @@ class DatetimeHandle:
     # 주어진 문자열을 datetime 값으로 리턴
     # result = convert_datetime(value, style='EN', format='')
     # [참고]
-    #   
+    #
     # ======================================
     @staticmethod
     def convert_datetime(value, **kwargs):
