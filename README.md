@@ -14,7 +14,7 @@
         $  pip install git+ssh://git@github.com/jinland-bommaru/vega_utils.git
 
     # file logger 사용 시
-        from vega_utils import FileLogger, FileLoggerError, LogLevel
+        from vega_utils.logger import FileLogger, FileLoggerError, LogLevel
                 :
                 :
         log = FileLogger(
@@ -28,7 +28,7 @@
         log.debug('this is a test log. time[%s]', time.time())
                 :
     # socket logger 사용 시
-        from vega_utils import SocketLogger, SocketLoggerError, LogLevel
+        from vega_utils.logger import SocketLogger, SocketLoggerError, LogLevel
                 :
                 :
         log = SocketLogger(
@@ -42,31 +42,31 @@
         log.debug('this is a test log. time[%s]', time.time())
 
     # ProcessHandle 사용 시
-        from vega_utils import ProcessHandle as ph
+        from vega_utils.process import ProcessHandle as ph
                 :
                 :
         result = ph.pids()
 
     # NetworkHandle 사용 시
-        from vega_utils import NetworkHandle as nh
+        from vega_utils.network import NetworkHandle as nh
                 :
                 :
         result = nh.is_url()
 
     # StringHandle 사용 시
-        from vega_utils import StringHandle as sh
+        from vega_utils.string import StringHandle as sh
                 :
                 :
         result = sh.emoji(value)
 
     # DateHandle 사용 시
-        from vega_utils import DateHandle as dh
+        from vega_utils.datetime import DateHandle as dh
                 :
                 :
         result = dh.now()
 
     # Slack를 통한 메시지 전송 시
-        from vega_utils import Slack as slack
+        from vega_utils.slack import Slack as slack
                 :
                 :
         slack.send('slac webhook url', blocks)
