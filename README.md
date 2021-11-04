@@ -3,6 +3,7 @@
 
     * 의존성:
         - python 3.8.10 이상
+        - slack-sdk 3.11.2 이상
         - pytz 2021.3 이상
         - python-dateutil 2.8.2 이상
         - psutil 5.8.0 이상
@@ -63,4 +64,12 @@
                 :
                 :
         result = dh.now()
+
+    # Slack를 통한 메시지 전송 시
+        from vega_utils import Slack as slack
+                :
+                :
+        slack.send('slac webhook url', blocks)
+        [참고]
+        blocks에 보내고자 하는 메시지 형식을 담아 전송. 형식은 slack 홈페이지 참조
 ```

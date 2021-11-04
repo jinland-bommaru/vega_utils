@@ -22,7 +22,8 @@ setup(
     install_requires=[
         'pytz >= 2021.3',
         'python-dateutil >= 2.8.2',
-        'psutil >= 5.8.0'
+        'psutil >= 5.8.0',
+        'slack-sdk >= 3.11.2'
     ],
     package_data={"web_driver": ["*.txt"]},
     include_package_data=True,
