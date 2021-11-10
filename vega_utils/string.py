@@ -101,12 +101,10 @@ class StringHandle:
                     elif 'B' in result:
                         result = result.replace('B', '') + '000000000'
                     elif 'T' in result:
-                        result = result.replace('T', '') + '000000000000'                        
+                        result = result.replace('T', '') + '000000000000'
                     else:
                         result = re.sub('[^0-9]', '', result)
             return int(result)
         except Exception as e:
             msg = 'StringHandle exception occured in convert_number(). value: %s Message: %s' % (result, str(e))
             raise StringHandleError(msg)
-
-StringHandle.convert_number('거래대금 618,228백만', style='KO')
