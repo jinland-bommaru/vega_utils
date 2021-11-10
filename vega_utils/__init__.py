@@ -1,8 +1,8 @@
 from .slack import Slack, SlackError
-from .string_handle import StringHandle, StringHandleError
-from .process_handle import ProcessHandle, ProcessHandleError
-from .network_handle import NetworkHandle, NetworkHandleError
-from .datetime_handle import DatetimeHandle, DatetimeHandleError
+from .string import StringHandle, StringHandleError
+from .process import ProcessHandle, ProcessHandleError
+from .network import NetworkHandle, NetworkHandleError
+from .datetime import DatetimeHandle, DatetimeHandleError
 from .logger import FileLogger, FileLoggerError, SocketLogger, SocketLoggerError, LogLevel
 
 __all__ = [
