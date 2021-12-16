@@ -18,7 +18,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='==3.8.10',
+    python_requires='>=3.8.10',
     install_requires=[
         'pytz >= 2021.3',
         'python-dateutil >= 2.8.2',
